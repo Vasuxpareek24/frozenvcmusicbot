@@ -20,6 +20,3 @@ services:
       UPDATES_CHANNEL: ""
       SUPPORT_GROUP: ""
       START_ANIMATION: ""
-
-
-
