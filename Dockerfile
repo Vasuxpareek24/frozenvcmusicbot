@@ -1,8 +1,14 @@
 FROM python:3.10-slim
 
-# Install ffmpeg + dependencies
+# Install full ffmpeg (includes ffprobe) + dependencies
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends ffmpeg ffmpeg-doc libsm6 libxext6 git && \
+    apt-get install -y --no-install-recommends \
+        ffmpeg \
+        libsm6 \
+        libxext6 \
+        git \
+        wget \
+        ca-certificates && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
