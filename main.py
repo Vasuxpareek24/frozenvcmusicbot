@@ -726,7 +726,7 @@ async def process_play_command(message: Message, query: str):
         video_url, title, duration_iso, thumb = result
         if not video_url:
             await processing_message.edit(
-                "❌ Could not find the song. Try another query.\nSupport: @frozensupport1"
+                "❌ Could not find the song. Try another query.\nSupport: @vxixs"
             )
             return
 
@@ -892,7 +892,7 @@ async def update_progress_caption(
 
 
 
-LOG_CHAT_ID = "@frozenmusiclogs"
+LOG_CHAT_ID = "@uxmusiclogs"
 
 async def fallback_local_playback(chat_id: int, message: Message, song_info: dict):
     playback_mode[chat_id] = "local"
@@ -1565,7 +1565,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     me = bot.get_me()
-    BOT_NAME = me.first_name or "Frozen Music"
+    BOT_NAME = me.first_name or "UxMusic"
     BOT_USERNAME = me.username or os.getenv("BOT_USERNAME", "vcmusiclubot")
     BOT_LINK = f"https://t.me/{BOT_USERNAME}"
 
